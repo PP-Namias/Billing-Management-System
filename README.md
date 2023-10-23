@@ -1,5 +1,5 @@
 <p align="center">
-<img src="images/banner.png" alt="Banner">
+<img src="Banner.png" alt="Banner">
 </p>
 
 # Biling Management System
@@ -107,7 +107,7 @@ Planned (✘) and currently working (✘) - but not necessarily fully completed 
 
 ## Flowchart
 <p align="center">
-<img src="images/Features.png" alt="Features flowchart">
+<img src="Flowchart.png" alt="Flowchart">
 </p>
 
 ## Programming Paradigms & Principles Used
