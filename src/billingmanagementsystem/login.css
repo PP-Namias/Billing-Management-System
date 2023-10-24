@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.button{
+    
+    -fx-background-color: linear-gradient(to bottom left,#F88379,#DE3163) ;
+    -fx-background-radius: 50 50 50 50;
+}
+.button:hover{
+    -fx-background-color: linear-gradient(to bottom left,#00008B,#4bc0dd) ;
+    -fx-background-radius: 50 50 50 50;
+}
+.button:pressed{
+    
+   -fx-background-color: linear-gradient(to bottom left,#F88379,#00008B) ;
+    -fx-background-radius: 50 50 50 50; 
+}
+
+
+.mainFxmlClass {
+
+}

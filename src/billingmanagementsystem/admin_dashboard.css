@@ -1,0 +1,43 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.billing_btn, .customer_btn, .product_btn, .dashboard_btn, .about_us_btn , .sign_out_btn{
+    -fx-background-color: transparent;
+    -fx-font-family: Sans Serif;
+    -fx-font-size: 15;
+    -fx-text-fill: #00072D;
+}
+.dashboard_btn:hover , .customer_btn:hover, .product_btn:hover, .billing_btn:hover, .about_us_btn:hover{
+    -fx-background-radius: 80 80 80 80;
+    -fx-text-fill:white;
+    -fx-background-color:#00072D;
+}
+
+
+
+.dashboard_btn:hover #icon1, .customer_btn:hover #icon2, .product_btn:hover #icon3, .billing_btn:hover #icon4, .about_us_btn:hover #icon5{
+     -fx-effect: innershadow(gaussian, rgba(255,255,255,1), 10, 1, 1, 1); 
+}
+
+.dashboard_btn:active , .customer_btn:active, .product_btn:active, .billing_btn:active, .about_us_btn:active{
+     -fx-background-color:#00072D;
+    -fx-background-radius: 80 80 80 80;
+    -fx-text-fill:white;
+    
+}
+
+.dashboard_btn:active #icon1, .customer_btn:active #icon2, .product_btn:active #icon3, .billing_btn:active #icon4, .about_us_btn:active #icon5{
+     -fx-effect: innershadow(gaussian, rgba(255,255,255,1), 10, 1, 1, 1); 
+}
+
+.mainFxmlClass {
+    -fx-background-color: #040720;
+}
+.anchor_pane{
+    -fx-background-color:white;
+    -fx-background-radius: 20 20 20 20;
+    
+}
+
+
