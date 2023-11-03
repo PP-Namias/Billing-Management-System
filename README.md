@@ -110,8 +110,16 @@ It automates the billing process, ensuring accurate calculations of charges, tax
 
 ## Cons: 
 Need Maintenance and updates most of the time, necessary siya to keep the BMS functioning correctly
-## Source Code
 
+## Technologies Used
+The following are the technologies that have been used in the development of this project. All of them are free to use.
+- JetBrains IntelliJ IDE
+- JavaFx
+- Apache NetBeans IDE (for the GUI designer)
+- MySQL Server and Workbench
+- JDK 21
+
+## Source Code
 The software code has been divided into four different packages:
 - Data Access Object (DAO): Contains the data access layer of the software that interacts directly with the database and its tables. Used for retrieval and modification of data.
 - Data Transfer Object (DTO): Contains the data transfer layer that allows the data to be transferred between the data access layer and the UI layer.
@@ -121,7 +129,6 @@ The software code has been divided into four different packages:
 Click [here](src/com/inventory/) to skip directly to the source code.
 
 ## Work-in-Progress
-
 This project is a work in progress and more features are yet to be added with new technologies.
 
 
