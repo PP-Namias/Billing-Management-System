@@ -1,0 +1,27 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Nov 8, 2023, 12:00:10 AM
+    Author     : User
+*/
+.TextField{
+-fx-background-color: linear-gradient(to bottom left,#F88379,#DE3163) ;
+ 
+}
+.button{
+    
+    -fx-background-color: linear-gradient(to bottom left,#F88379,#DE3163) ;
+    -fx-background-radius: 50 50 50 50;
+    
+}
+.button:hover{
+    -fx-background-color: linear-gradient(to bottom left,#00008B,#4bc0dd) ;
+    -fx-background-radius: 50 50 50 50;
+}
+
+.anchor_pane{
+    
+   -fx-background-color:white;
+}

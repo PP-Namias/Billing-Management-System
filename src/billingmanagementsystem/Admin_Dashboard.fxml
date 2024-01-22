@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.LineChart?>
-<?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="1300.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingmanagementsystem.Admin_DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="721.0" prefWidth="1295.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingmanagementsystem.Admin_DashboardController">
+
     <stylesheets>
         <URL value="@admin_dashboard.css" />
     </stylesheets>
    <children>
-      <BorderPane prefHeight="698.0" prefWidth="1365.0">
+      <BorderPane prefHeight="698.0" prefWidth="1086.0">
          <left>
             <AnchorPane BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane layoutX="17.0" layoutY="15.0" prefHeight="666.0" prefWidth="197.0" style="-fx-background-color: white; -fx-background-radius: 20 20 20 20;">
+                  <AnchorPane layoutX="17.0" layoutY="4.0" prefHeight="664.0" prefWidth="192.0" style="-fx-background-color: white; -fx-background-radius: 20 20 20 20;">
                      <children>
-                        <Button fx:id="dashboard_btn" alignment="CENTER" graphicTextGap="11.0" layoutX="15.0" layoutY="216.0" mnemonicParsing="false" onAction="#Switch_Pane" onMouseClicked="#changestyle" prefHeight="55.0" prefWidth="159.0" styleClass="dashboard_btn" stylesheets="@admin_dashboard.css" text="  Dashboard" textFill="#f5f5f5">
+                        <Button fx:id="dashboard_btn" alignment="CENTER" graphicTextGap="11.0" layoutX="17.0" layoutY="241.0" mnemonicParsing="false" onAction="#Switch_Pane" onMouseClicked="#changestyle" prefHeight="55.0" prefWidth="159.0" styleClass="dashboard_btn" stylesheets="@admin_dashboard.css" text="  Dashboard" textFill="#f5f5f5">
                            <graphic>
                               <ImageView fx:id="icon1" fitHeight="25.0" fitWidth="154.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="dashboard_btn" translateX="3.0">
                                  <image>
@@ -35,7 +30,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="customer_btn" alignment="CENTER" graphicTextGap="11.0" layoutX="15.0" layoutY="266.0" mnemonicParsing="false" onAction="#Switch_Pane" onMouseClicked="#changestyle" prefHeight="55.0" prefWidth="159.0" styleClass="customer_btn" stylesheets="@admin_dashboard.css" text="Customer" textAlignment="RIGHT" textFill="WHITE">
+                        <Button fx:id="customer_btn" alignment="CENTER" graphicTextGap="11.0" layoutX="17.0" layoutY="291.0" mnemonicParsing="false" onAction="#Switch_Pane" onMouseClicked="#changestyle" prefHeight="55.0" prefWidth="159.0" styleClass="customer_btn" stylesheets="@admin_dashboard.css" text="Customer" textAlignment="RIGHT" textFill="WHITE">
                            <graphic>
                               <ImageView fx:id="icon2" fitHeight="25.0" fitWidth="153.0" pickOnBounds="true" preserveRatio="true" styleClass="customer_btn" translateX="-4.0">
                                  <image>
@@ -44,7 +39,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="product_btn" alignment="CENTER" graphicTextGap="1.0" layoutX="15.0" layoutY="316.0" mnemonicParsing="false" onAction="#Switch_Pane" onMouseClicked="#changestyle" prefHeight="55.0" prefWidth="159.0" styleClass="product_btn" stylesheets="@admin_dashboard.css" text="Product" textFill="#f8f5f5">
+                        <Button fx:id="product_btn" alignment="CENTER" graphicTextGap="1.0" layoutX="17.0" layoutY="341.0" mnemonicParsing="false" onAction="#Switch_Pane" onMouseClicked="#changestyle" prefHeight="55.0" prefWidth="159.0" styleClass="product_btn" stylesheets="@admin_dashboard.css" text="Product" textFill="#f8f5f5">
                            <graphic>
                               <ImageView fx:id="icon3" fitHeight="25.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true" styleClass="product_btn" translateX="-14.0">
                                  <image>
@@ -53,7 +48,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="billing_btn" alignment="CENTER" graphicTextGap="0.0" layoutX="15.0" layoutY="366.0" mnemonicParsing="false" onAction="#Switch_Pane" onMouseClicked="#changestyle" prefHeight="55.0" prefWidth="159.0" styleClass="billing_btn" stylesheets="@admin_dashboard.css" text="Billings" textFill="#f5f3f3">
+                        <Button fx:id="billing_btn" alignment="CENTER" graphicTextGap="0.0" layoutX="17.0" layoutY="391.0" mnemonicParsing="false" onAction="#Switch_Pane" onMouseClicked="#changestyle" prefHeight="55.0" prefWidth="159.0" styleClass="billing_btn" stylesheets="@admin_dashboard.css" text="Billings" textFill="#f5f3f3">
                            <graphic>
                               <ImageView fx:id="icon4" fitHeight="25.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true" styleClass="billing_btn" translateX="-17.0">
                                  <image>
@@ -62,7 +57,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="about_us_btn" graphicTextGap="10.0" layoutX="15.0" layoutY="421.0" mnemonicParsing="false" onAction="#Switch_Pane" onMouseClicked="#changestyle" prefHeight="55.0" prefWidth="159.0" styleClass="about_us_btn" stylesheets="@admin_dashboard.css" text="  About Us" textFill="#f8f5f5">
+                        <Button fx:id="employeeBttn" graphicTextGap="10.0" layoutX="17.0" layoutY="446.0" mnemonicParsing="false" onAction="#Switch_Pane" onMouseClicked="#changestyle" prefHeight="55.0" prefWidth="159.0" styleClass="about_us_btn" stylesheets="@admin_dashboard.css" text="Employee" textFill="#f8f5f5">
                            <graphic>
                               <ImageView fx:id="icon5" fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" styleClass="about_us_btn">
                                  <image>
@@ -80,18 +75,28 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <AnchorPane layoutX="17.0" layoutY="26.0" prefHeight="149.0" prefWidth="158.0">
+                        <AnchorPane layoutX="18.0" layoutY="63.0" prefHeight="149.0" prefWidth="158.0">
                            <children>
-                              <ImageView fitHeight="50.0" fitWidth="122.0" layoutX="30.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="122.0" layoutX="25.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../Graphics/pngwing.com%20(12).png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="126.0" fitWidth="103.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="126.0" fitWidth="103.0" layoutX="23.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../Graphics/dashboardlogo.png" />
                                  </image>
                               </ImageView>
+                              <Label layoutX="30.0" layoutY="105.0" text="Welcome!" textFill="#45b6fe">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="greetingText" layoutX="30.0" layoutY="128.0" text="Welcome!" textFill="#45b6fe">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </AnchorPane>
                      </children>
@@ -100,72 +105,36 @@
             </AnchorPane>
          </left>
          <center>
-            <AnchorPane prefHeight="698.0" prefWidth="1137.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="665.0" prefWidth="1057.0" BorderPane.alignment="CENTER">
+
                <children>
-                  <AnchorPane fx:id="dashboard_pane" prefHeight="688.0" prefWidth="1161.0" styleClass="mainFxmlClass" stylesheets="@admin_dashboard.css">
-                     <children>
-                        <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="343.0" prefWidth="828.0" styleClass="anchor_pane" stylesheets="@admin_dashboard.css">
-                           <children>
-                              <LineChart layoutX="19.0" layoutY="14.0" prefHeight="315.0" prefWidth="347.0">
-                                <xAxis>
-                                  <CategoryAxis side="BOTTOM" />
-                                </xAxis>
-                                <yAxis>
-                                  <NumberAxis side="LEFT" />
-                                </yAxis>
-                              </LineChart>
-                              <PieChart layoutX="400.0" layoutY="26.0" prefHeight="277.0" prefWidth="387.0" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="874.0" layoutY="23.0" prefHeight="657.0" prefWidth="263.0" styleClass="anchor_pane" />
-                        <AnchorPane layoutX="421.0" layoutY="374.0" prefHeight="307.0" prefWidth="428.0" styleClass="anchor_pane" />
-                        <AnchorPane layoutX="21.0" layoutY="374.0" prefHeight="139.0" prefWidth="182.0" styleClass="anchor_pane" />
-                        <AnchorPane layoutX="217.0" layoutY="374.0" prefHeight="140.0" prefWidth="180.0" styleClass="anchor_pane" />
-                        <AnchorPane layoutX="21.0" layoutY="528.0" prefHeight="149.0" prefWidth="180.0" styleClass="anchor_pane" />
-                        <AnchorPane layoutX="217.0" layoutY="528.0" prefHeight="149.0" prefWidth="180.0" styleClass="anchor_pane" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane fx:id="customer_pane" prefHeight="698.0" prefWidth="1160.0" styleClass="mainFxmlClass" stylesheets="@admin_dashboard.css" visible="false">
-                     <children>
-                        <Label layoutX="89.0" layoutY="174.0" prefHeight="221.0" prefWidth="426.0" text="Customer">
-                           <font>
-                              <Font size="84.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane fx:id="product_pane" prefHeight="698.0" prefWidth="1158.0" styleClass="mainFxmlClass" stylesheets="@admin_dashboard.css" visible="false">
-                     <children>
-                        <VBox layoutX="25.0" layoutY="55.0" prefHeight="248.0" prefWidth="1108.0" style="-fx-background-color: white; -fx-background-radius: 20 20 20 20;" />
-                        <TextField layoutX="21.0" layoutY="17.0" prefHeight="22.0" prefWidth="271.0" promptText="Search" style="-fx-background-radius: 10 10 10 10;" />
-                        <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="264.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Graphics/search.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane fx:id="billing_pane" prefHeight="698.0" prefWidth="1158.0" styleClass="mainFxmlClass" stylesheets="@admin_dashboard.css" visible="false">
-                     <children>
-                        <Label layoutX="92.0" layoutY="160.0" prefHeight="185.0" prefWidth="438.0" text="Billing">
-                           <font>
-                              <Font size="96.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane fx:id="about_us_pane" prefHeight="698.0" prefWidth="1160.0" styleClass="mainFxmlClass" stylesheets="@admin_dashboard.css" visible="false">
-                     <children>
-                        <Label layoutX="183.0" layoutY="241.0" prefHeight="184.0" prefWidth="327.0" text="about us">
-                           <font>
-                              <Font size="74.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
+                  <AnchorPane fx:id="dashboard_pane" layoutX="11.0" prefHeight="665.0" prefWidth="1057.0" styleClass="anchor_pane" stylesheets="@admin_dashboard.css" />
+
                </children>
             </AnchorPane>
          </center>
+         <top>
+            <AnchorPane prefHeight="36.0" prefWidth="1320.0" styleClass="mainFxmlClass" stylesheets="@admin_dashboard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="exit" fitHeight="15.0" fitWidth="14.0" layoutX="1266.0" layoutY="10.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Graphics/close.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="maximize" fitHeight="16.0" fitWidth="17.0" layoutX="1233.0" layoutY="9.0" onMouseClicked="#maximize" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Graphics/restore-down.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="minimize" fitHeight="17.0" fitWidth="19.0" layoutX="1201.0" layoutY="12.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
+
+                     <image>
+                        <Image url="@../Graphics/minimize-sign.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
       </BorderPane>
    </children>
 </AnchorPane>

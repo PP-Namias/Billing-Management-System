@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="665.0" prefWidth="1057.0" style="-fx-background-color: #040720;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingmanagementsystem.ProductController">
+   <children>
+      <AnchorPane prefHeight="676.0" prefWidth="1072.0" styleClass="anchor_pane" stylesheets="@Product.css">
+         <children>
+            <Separator layoutX="6.0" layoutY="77.0" prefHeight="40.0" prefWidth="1054.0" />
+            <TableView fx:id="product_table" layoutX="14.0" layoutY="157.0" prefHeight="493.0" prefWidth="1044.0" style="-fx-background-color: #eec5c5;">
+               <columns>
+                  <TableColumn fx:id="editcolumn" prefWidth="65.0" text="Actions" />
+                  <TableColumn fx:id="productID" prefWidth="57.0" text="ID" />
+                  <TableColumn fx:id="productName" prefWidth="198.0" text="Product Name" />
+                  <TableColumn fx:id="price" prefWidth="65.0" text="Price" />
+                  <TableColumn fx:id="Stocks" minWidth="0.0" prefWidth="46.0" text="Stocks" />
+                  <TableColumn fx:id="Description" prefWidth="205.0" text="Description" />
+                  <TableColumn fx:id="parentType" minWidth="1.0" prefWidth="131.0" text="Sportswear Category" />
+                  <TableColumn fx:id="type" prefWidth="99.0" text="Sub Category" />
+                  <TableColumn fx:id="Brand" prefWidth="69.0" text="Brand" />
+                  <TableColumn fx:id="othersAttributes" prefWidth="52.0" text="Others" />
+                  <TableColumn fx:id="ImageCol" prefWidth="56.0" text="Image" />
+               </columns>
+            </TableView>
+            <TextField fx:id="searchbox" layoutX="121.0" layoutY="121.0" onKeyReleased="#SearchProduct" prefHeight="26.0" prefWidth="423.0" promptText="ID, Product Name, Categories (Footwear Shoes Men)" style="-fx-background-radius: 10 10 10 10;" />
+            <ImageView fitHeight="18.0" fitWidth="20.0" layoutX="518.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Graphics/search.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="511.0" layoutY="125.0" orientation="VERTICAL" prefHeight="18.0" prefWidth="0.0" />
+            <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="19.0" layoutY="114.0" onMouseClicked="#OpenProductDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Graphics/add-product%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="47.0" layoutX="71.0" layoutY="115.0" onMouseClicked="#RefreshTable" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Graphics/refresh1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="14.0" style="-fx-text-fill: rgb(67, 85, 133);" text="Products">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="63.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.985781990521327" startX="1.0" startY="0.933649289099526">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7894737124443054" green="0.20467835664749146" blue="0.20467835664749146" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9333333373069763" green="0.772549033164978" blue="0.772549033164978" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Separator layoutX="258.0" layoutY="61.0" prefHeight="9.0" prefWidth="799.0" style="-fx-background-color: rgb(67, 85, 133);" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

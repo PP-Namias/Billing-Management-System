@@ -1,0 +1,33 @@
+.header{
+	-fx-text-fill:  rgb(67, 85, 133);
+	-fx-font-family: "Franklin Gothic Demi Cond", sans-serif;
+	-fx-font-size: 35px;
+}
+
+.button{
+	-fx-text-fill:  rgb(67, 85, 133);
+	-fx-background-radius: 30;
+	-fx-background-color: #eee;
+	-fx-alignment: center;
+}
+
+#confirm{
+	-fx-text-fill:  #eee;
+	-fx-background-radius: 30;
+	-fx-background-color: rgb(67, 85, 133);
+	-fx-alignment: center;
+}
+#fieldPane{
+	-fx-background-radius: 30;
+	-fx-background-color: rgb(67, 85, 133);
+	-fx-text-fill: #eee;
+	-fx-pref-height: 45px;
+}
+
+#label{
+	-fx-text-fill: #eee;
+}
+
+.roundedPane{
+	-fx-background-radius: 30;
+}

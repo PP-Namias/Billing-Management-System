@@ -1,0 +1,14 @@
+#title{
+	-fx-text-fill:  rgb(67, 85, 133);
+	-fx-font-family: "Franklin Gothic Demi Cond", sans-serif;
+	-fx-font-size: 35px;
+}
+
+.button{
+	-fx-background-radius: 30;
+	-fx-background-color: #435585;
+}
+
+.roundedPane{
+	-fx-background-radius: 30;
+}

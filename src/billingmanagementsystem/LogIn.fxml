@@ -1,86 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="869.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingmanagementsystem.LogInController">
-    <stylesheets>
-        <URL value="@login.css" />
-    </stylesheets>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingmanagementsystem.LogInController">
    <children>
-      <ImageView fitHeight="493.0" fitWidth="869.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Graphics/Screenshot%202023-10-22%20192411.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="239.0" fitWidth="239.0" layoutX="246.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Graphics/Tanjiro_020_High_Tops_Shoes_-_8_US_Men__10_US_Women-removebg-preview.png" />
-         </image>
-      </ImageView>
-      <TextField layoutX="549.0" layoutY="235.0" prefHeight="26.0" prefWidth="194.0" promptText="Enter Username" style="-fx-border-color: blue;">
-         <cursor>
-            <Cursor fx:constant="OPEN_HAND" />
-         </cursor>
-      </TextField>
-      <Label layoutX="549.0" layoutY="210.0" text="Username:" textFill="#077f97" />
-      <Label layoutX="549.0" layoutY="286.0" text="Password:" textFill="#077f97" />
-      <ImageView fitHeight="322.0" fitWidth="332.0" layoutX="-2.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Graphics/Text.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="197.0" fitWidth="239.0" layoutX="310.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Graphics/shoe%20effect.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="552.0" layoutY="338.0" text="Forgot Password?" />
-      <ImageView fitHeight="82.0" fitWidth="230.0" layoutX="531.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Graphics/Welcome.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="102.0" fitWidth="133.0" layoutX="584.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Graphics/Userin.png" />
-         </image>
-      </ImageView>
-      <PasswordField layoutX="549.0" layoutY="308.0" prefHeight="26.0" prefWidth="194.0" promptText="Enter Password" style="-fx-border-color: blue;" />
-      <Button layoutX="541.0" layoutY="389.0" mnemonicParsing="false" onAction="#login" prefHeight="53.0" prefWidth="218.0" stylesheets="@login.css" text="SIGN IN">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="79.0" fitWidth="182.0" layoutX="52.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Graphics/pngwing.com%20(12).png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="203.0" fitWidth="230.0" layoutX="14.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Graphics/Logo.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="515.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Graphics/boy.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="514.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Graphics/unlock.png" />
-         </image>
-      </ImageView>
-      <CheckBox layoutX="753.0" layoutY="316.0" mnemonicParsing="false" text="Show Password" textFill="#4d25aa" />
+      <AnchorPane layoutX="20.0" prefHeight="449.0" prefWidth="679.0" styleClass="mainFxmlClass" stylesheets="@login.css">
+         <children>
+            <ImageView fitHeight="455.0" fitWidth="799.0" layoutX="-125.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Graphics/Screenshot%202023-10-22%20192411.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="loginButton" layoutX="245.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchLoginPane" prefHeight="25.0" prefWidth="172.0" style="-fx-background-radius: 3 3 3 3; -fx-border-color: black; -fx-border-radius: 3 3 3 3;" text="Login">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Graphics/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="signUpButton" layoutX="417.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchSignUpPane" prefHeight="25.0" prefWidth="157.0" style="-fx-background-radius: 3 3 3 3; -fx-background-color: white;" text="Sign up">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Graphics/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <BorderPane layoutX="247.0" layoutY="37.0" prefHeight="322.0" prefWidth="230.0">
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="loginPane" prefHeight="406.0" prefWidth="327.0" style="-fx-border-color: grey;">
+                           <children>
+                              <ImageView fitHeight="77.0" fitWidth="194.0" layoutX="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Graphics/Welcome.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="85.0" layoutY="134.0" text="Username:" textFill="#077f97" />
+                              <TextField fx:id="usernameField" layoutX="85.0" layoutY="154.0" prefHeight="26.0" prefWidth="194.0" promptText="Enter Username" style="-fx-border-color: rgb(54, 48, 98);">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </TextField>
+                              <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="57.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Graphics/boy.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="85.0" layoutY="188.0" text="Password:" textFill="#077f97" />
+                              <PasswordField fx:id="passwordField" layoutX="85.0" layoutY="207.0" prefHeight="26.0" prefWidth="194.0" promptText="Enter Password" style="-fx-border-color: rgb(54, 48, 98);" />
+                              <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="57.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Graphics/unlock.png" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="64.0" layoutY="329.0" mnemonicParsing="false" onAction="#login" prefHeight="53.0" prefWidth="218.0" stylesheets="@login.css" text="SIGN IN">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="forget_password" layoutX="85.0" layoutY="241.0" onMouseClicked="#forgetpassword" text="Forgot Password?" />
+                              <ImageView fx:id="showPasswordIcon" fitHeight="24.0" fitWidth="24.0" layoutX="283.0" layoutY="207.0" onMouseClicked="#showPassword" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Graphics/eye-crossed.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="selectRole" layoutX="115.0" layoutY="101.0" prefHeight="27.0" prefWidth="128.0" promptText="Select UserType" style="-fx-background-color: white; -fx-border-color: grey;" />
+                              <Label fx:id="warningtext" layoutX="115.0" layoutY="77.0" prefHeight="17.0" prefWidth="128.0" textFill="#27bc47" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="signUpPane" prefHeight="406.0" prefWidth="327.0" style="-fx-border-color: black;" visible="false">
+                           <children>
+                              <Label layoutX="82.0" layoutY="237.0" text="Confirm Password:" textFill="#077f97" />
+                              <Label layoutX="85.0" layoutY="124.0" text="Username:" textFill="#077f97" />
+                              <TextField fx:id="usernameSignUp" layoutX="82.0" layoutY="144.0" prefHeight="26.0" prefWidth="194.0" promptText="Enter Username" style="-fx-border-color: rgb(54, 48, 98);">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </TextField>
+                              <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="53.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Graphics/boy.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="82.0" layoutY="176.0" text="Password:" textFill="#077f97" />
+                              <PasswordField fx:id="passwordSignUp" layoutX="82.0" layoutY="195.0" prefHeight="26.0" prefWidth="194.0" promptText="Enter Password" style="-fx-border-color: rgb(54, 48, 98);" />
+                              <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="51.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Graphics/unlock.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="77.0" fitWidth="194.0" layoutX="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Graphics/Welcome.png" />
+                                 </image>
+                              </ImageView>
+                              <PasswordField fx:id="confirmpasswordSignUp" layoutX="82.0" layoutY="255.0" prefHeight="26.0" prefWidth="194.0" promptText="Enter Password" style="-fx-border-color: rgb(54, 48, 98);" />
+                              <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="54.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Graphics/unlock.png" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="64.0" layoutY="329.0" mnemonicParsing="false" onAction="#signUp" prefHeight="53.0" prefWidth="218.0" stylesheets="@login.css" text="SIGN UP">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="103.0" layoutY="76.0" prefHeight="17.0" prefWidth="36.0" text="Create" textFill="#077f97" />
+                              <Label fx:id="employeeSignUp" layoutX="140.0" layoutY="76.0" prefHeight="17.0" prefWidth="57.0" text="Employee" textFill="#077f97" />
+                              <Label layoutX="195.0" layoutY="76.0" prefHeight="17.0" prefWidth="57.0" text="Account" textFill="#077f97" />
+                              <Label fx:id="confirmTxt" layoutX="100.0" layoutY="100.0" prefHeight="17.0" prefWidth="146.0" textFill="#1fda4b">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="adminPane" prefHeight="406.0" prefWidth="327.0" style="-fx-border-color: black;" visible="false">
+                           <children>
+                              <Label layoutX="60.0" layoutY="82.0" prefHeight="23.0" prefWidth="38.0" text="Enter" textFill="#077f97">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="77.0" fitWidth="194.0" layoutX="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Graphics/Welcome.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="usernameSignUp1" layoutX="92.0" layoutY="154.0" prefHeight="26.0" prefWidth="194.0" promptText="Enter Username" style="-fx-border-color: rgb(54, 48, 98);">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </TextField>
+                              <PasswordField fx:id="passwordSignUp1" layoutX="93.0" layoutY="204.0" prefHeight="26.0" prefWidth="194.0" promptText="Enter Password" style="-fx-border-color: rgb(54, 48, 98);" />
+                              <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="62.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Graphics/boy.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="62.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Graphics/unlock.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="92.0" layoutY="136.0" text="Username:" textFill="#077f97" />
+                              <Label layoutX="94.0" layoutY="187.0" text="Password:" textFill="#077f97" />
+                              <Button layoutX="75.0" layoutY="316.0" mnemonicParsing="false" onAction="#checkAdminCredentials" prefHeight="53.0" prefWidth="218.0" stylesheets="@login.css" text="Check">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="adminText" layoutX="100.0" layoutY="82.0" prefHeight="23.0" prefWidth="51.0" text="Admin" textFill="#077f97">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="149.0" layoutY="82.0" prefHeight="23.0" prefWidth="150.0" text="credentials to sign up" textFill="#077f97">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="warningtext1" layoutX="103.0" layoutY="110.0" prefHeight="17.0" prefWidth="126.0" textFill="#2fc931" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+            <ImageView fitHeight="275.0" fitWidth="301.0" layoutX="-12.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Graphics/istockphoto-1097092670-612x612-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label layoutY="53.0" prefHeight="67.0" prefWidth="233.0" text="Welcome!" textFill="WHITE">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="648.0" layoutY="2.0" onMouseClicked="#exitLogin" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Graphics/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

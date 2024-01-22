@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="354.0" prefWidth="616.0" stylesheets="@Product.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingmanagementsystem.ProductDetailsController">
+   <children>
+      <AnchorPane layoutY="92.0" prefHeight="238.0" prefWidth="421.0">
+         <children>
+            <AnchorPane prefHeight="53.0" prefWidth="417.0" style="-fx-background-color: #f2f3f5;">
+               <children>
+                  <Label layoutX="34.0" layoutY="24.0" prefHeight="15.0" prefWidth="70.0" text="Product ID:" textFill="#de3163" visible="false">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="prodID" editable="false" layoutX="111.0" layoutY="19.0" prefHeight="25.0" prefWidth="84.0" visible="false" />
+                  <Separator layoutX="-1.0" layoutY="45.0" prefHeight="8.0" prefWidth="412.0" />
+                  <Label layoutX="215.0" layoutY="25.0" text="No. of Stocks:" textFill="#435585">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="NoOfStocks" editable="true" layoutX="307.0" layoutY="19.0" prefHeight="25.0" prefWidth="101.0" />
+                  <AnchorPane layoutY="-92.0" prefHeight="80.0" prefWidth="616.0" style="-fx-background-color: rgb(67, 85, 133); -fx-background-radius: 20 20 0 0;">
+                     <children>
+                        <Label layoutX="223.0" layoutY="10.0" prefHeight="60.0" prefWidth="170.0" text="Products" textFill="WHITE">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="44.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Label layoutX="14.0" layoutY="60.0" text="Product Name:" textFill="#435585">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="91.0" text="Price:" textFill="#435585">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="150.0" text="Description:" textFill="#435585">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prodName" layoutX="112.0" layoutY="55.0" prefHeight="26.0" prefWidth="299.0" />
+            <TextField fx:id="prodPrice" layoutX="112.0" layoutY="86.0" prefHeight="26.0" prefWidth="154.0" />
+            <TextArea fx:id="prodDesc" layoutX="112.0" layoutY="118.0" prefHeight="92.0" prefWidth="154.0" />
+            <ComboBox fx:id="prodParentType" editable="true" layoutX="279.0" layoutY="87.0" prefHeight="25.0" prefWidth="132.0" promptText="Sportswear Type" />
+            <ComboBox fx:id="prodSubcategory" layoutX="279.0" layoutY="118.0" prefHeight="25.0" prefWidth="132.0" promptText="Subcategory" />
+            <ComboBox fx:id="prodBrand" layoutX="279.0" layoutY="152.0" prefHeight="25.0" prefWidth="132.0" promptText="Brand" />
+            <ComboBox fx:id="otherAtt" layoutX="279.0" layoutY="185.0" prefHeight="25.0" prefWidth="132.0" promptText="Others" />
+            <Button layoutX="102.0" layoutY="220.0" mnemonicParsing="false" onAction="#saveproduct" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: rgb(67, 85, 133);" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="331.0" layoutY="219.0" mnemonicParsing="false" onAction="#clearfields" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: rgb(67, 85, 133);" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button layoutX="468.0" layoutY="310.0" mnemonicParsing="false" onAction="#imageChooser" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: rgb(67, 85, 133);" text="Upload" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Graphics/add-button.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <AnchorPane layoutX="426.0" layoutY="111.0" prefHeight="167.0" prefWidth="173.0" style="-fx-border-color: black;">
+         <children>
+            <ImageView fx:id="prodImage" fitHeight="167.0" fitWidth="170.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="msgconfirmation" alignment="CENTER_RIGHT" layoutX="364.0" layoutY="91.0" prefHeight="17.0" prefWidth="232.0" textFill="#29dd68" />
+      <TextField fx:id="pathFile" disable="true" layoutX="426.0" layoutY="280.0" prefHeight="25.0" prefWidth="170.0" promptText="Path File:" />
+   </children>
+</AnchorPane>

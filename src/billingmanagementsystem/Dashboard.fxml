@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="665.0" prefWidth="1057.0" style="-fx-background-color: #040720;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingmanagementsystem.DashboardController">
+    <stylesheets>
+        <URL value="@dashboard.css" />
+    </stylesheets>
+    <children>
+        <AnchorPane prefHeight="665.0" prefWidth="1057.0" styleClass="anchor_pane" stylesheets="@dashboard.css">
+
+            <children>
+            <AnchorPane fx:id="dashboardPane" layoutX="10.0" layoutY="63.0" prefHeight="591.0" prefWidth="1036.0" style="-fx-background-radius: 0 0 20 20; -fx-background-color: whitesmoke;">
+               <children>
+                  <AnchorPane layoutX="51.0" layoutY="16.0" prefHeight="84.0" prefWidth="185.0" style="-fx-background-color: #1fb57a; -fx-background-radius: 20 20 20 20;">
+                     <children>
+                        <Label layoutX="42.0" layoutY="11.0" prefHeight="30.0" prefWidth="140.0" text="No. of Orders:" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totalorders" layoutX="101.0" layoutY="40.0" text="Orders" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="68.0" fitWidth="65.0" layoutX="-26.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Graphics/order%20(3).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="307.0" layoutY="16.0" prefHeight="84.0" prefWidth="185.0" style="-fx-background-color: #1aa7ec; -fx-background-radius: 20 20 20 20;">
+                     <children>
+                        <Label layoutX="44.0" layoutY="8.0" text="Total Revenue:" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="-22.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Graphics/philippine-peso%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="totalrevenue" layoutX="88.0" layoutY="41.0" text="Revenue" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="540.0" layoutY="16.0" prefHeight="84.0" prefWidth="185.0" style="-fx-background-color: #e0115f; -fx-background-radius: 20 20 20 20;">
+                     <children>
+                        <Label layoutX="48.0" layoutY="10.0" text="Products:" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="-25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Graphics/cubes%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="totalproducts" layoutX="80.0" layoutY="41.0" text="Products" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="784.0" layoutY="16.0" prefHeight="84.0" prefWidth="185.0" style="-fx-background-color: #fcb001; -fx-background-radius: 20 20 20 20;">
+                     <children>
+                        <Label layoutX="48.0" layoutY="12.0" text="Customer:" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totalcustomer" layoutX="85.0" layoutY="42.0" text="Customer" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="-28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Graphics/customer2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="540.0" layoutY="128.0" prefHeight="245.0" prefWidth="227.0" style="-fx-background-color: white;">
+                     <children>
+                        <LineChart fx:id="chart1" layoutX="39.0" layoutY="60.0" prefHeight="157.0" prefWidth="170.0">
+                          <xAxis>
+                            <CategoryAxis fx:id="xAxisChart1" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="214.0" text="Customer Data Analysis" textFill="#45b6fe">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="782.0" layoutY="128.0" prefHeight="245.0" prefWidth="227.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="17.0" layoutY="16.0" text="Product Chart" textFill="#45b6fe">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <PieChart fx:id="pieChart" layoutX="10.0" layoutY="61.0" prefHeight="178.0" prefWidth="208.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="540.0" layoutY="389.0" prefHeight="178.0" prefWidth="474.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="22.0" layoutY="56.0" text="1. Converse ChuckTaylor 1975" textFill="#45b6fe">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane prefHeight="48.0" prefWidth="474.0" style="-fx-background-color: #45b6fe;">
+                           <children>
+                              <Label layoutX="20.0" layoutY="4.0" prefHeight="41.0" prefWidth="235.0" text="Top 3 Popular Products" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="89.0" prefHeight="41.0" prefWidth="474.0" style="-fx-background-color: #b5e2ff;">
+                           <children>
+                              <Label layoutX="24.0" layoutY="8.0" text="2. Converse ChuckTaylor 1975" textFill="WHITE">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="26.0" layoutY="140.0" text="3. Converse ChuckTaylor 1975" textFill="#45b6fe">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="128.0" prefHeight="441.0" prefWidth="503.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="27.0" layoutY="14.0" prefHeight="41.0" prefWidth="214.0" text="Product Analysis" textFill="#45b6fe">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <LineChart fx:id="chart2" layoutX="27.0" layoutY="62.0" prefHeight="368.0" prefWidth="458.0">
+                          <xAxis>   
+                            <NumberAxis fx:id="xAxisChart2" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="11.0" layoutY="14.0" prefHeight="41.0" prefWidth="1036.0" style="-fx-background-color: whitesmoke; -fx-background-radius: 20 20 0 0;">
+               <children>
+                  <ImageView accessibleText="Print Report" fitHeight="30.0" fitWidth="37.0" layoutX="982.0" layoutY="5.0" onMouseClicked="#PrintREPORT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Graphics/printer.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="msgLabel" layoutX="823.0" layoutY="13.0" prefHeight="20.0" prefWidth="154.0" textFill="#47ab4f">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

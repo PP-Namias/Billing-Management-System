@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="318.0" prefWidth="1129.0" style="-fx-background-color: #040720;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingmanagementsystem.ProductTableController">
+   <children>
+      <TableView fx:id="product_table" layoutX="9.0" layoutY="45.0" onMouseClicked="#tableclicked" prefHeight="264.0" prefWidth="1110.0">
+         <columns>
+            <TableColumn fx:id="productID" prefWidth="54.0" text="ID" />
+            <TableColumn fx:id="productName" prefWidth="194.0" text="ProductName" />
+            <TableColumn fx:id="price" minWidth="0.0" prefWidth="74.0" text="Price" />
+            <TableColumn fx:id="stocks" minWidth="0.0" prefWidth="62.0" text="Stocks" />
+            <TableColumn fx:id="description" prefWidth="232.0" text="Description" />
+            <TableColumn fx:id="swcategory" prefWidth="149.0" text="Sportswear Category" />
+            <TableColumn fx:id="subcategory" prefWidth="128.0" text="Sub Category" />
+            <TableColumn fx:id="brandcol" prefWidth="93.0" text="Brand" />
+            <TableColumn fx:id="otherscol" prefWidth="67.0" text="Others" />
+            <TableColumn fx:id="imagecol" prefWidth="56.0" text="Image" />
+         </columns>
+      </TableView>
+      <TextField fx:id="searchbox" layoutX="12.0" layoutY="7.0" onKeyReleased="#searchproduct" prefHeight="31.0" prefWidth="261.0" promptText="Search Id, First Name or Last Name:" style="-fx-background-radius: 20;" />
+      <ImageView fitHeight="23.0" fitWidth="25.0" layoutX="238.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Graphics/search.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="226.0" layoutY="11.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="1.0" />
+      <ImageView fitHeight="23.0" fitWidth="25.0" layoutX="1096.0" layoutY="11.0" onMouseClicked="#Close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Graphics/close.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

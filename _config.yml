@@ -1,5 +1,4 @@
 title: Billing Management System
-logo: Logo.png
-description: A system for managing billing, invoices, and financial transactions.
-google_analytics: G-94FTFZG4K5
-theme: jekyll-theme-minimal
+description: A System for Managing Billing, Invoices, and Financial Transactions
+google_analytics:
+theme: jekyll-theme-hacker

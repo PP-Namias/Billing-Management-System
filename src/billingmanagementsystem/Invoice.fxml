@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="723.0" prefWidth="629.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingmanagementsystem.InvoiceController">
+   <children>
+      <ImageView fitHeight="23.0" fitWidth="25.0" layoutX="598.0" layoutY="4.0" onMouseClicked="#Close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Graphics/close.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="37.0" prefHeight="686.0" prefWidth="629.0">
+         <children>
+            <Label layoutX="14.0" prefHeight="46.0" prefWidth="134.0" text="INVOICE">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <Separator layoutX="-1.0" layoutY="76.0" prefHeight="0.0" prefWidth="629.0" style="-fx-background-color: black;" />
+            <Label layoutX="404.0" layoutY="17.0" text="Document ID:" />
+            <Label layoutX="406.0" layoutY="50.0" text="Due Date:" />
+            <Label layoutX="406.0" layoutY="34.0" text="Date Issued:" />
+            <Label fx:id="previewID" layoutX="491.0" layoutY="17.0" text="Document ID:" />
+            <Label fx:id="dueDate" layoutX="493.0" layoutY="50.0" text="Due Date:" />
+            <Label fx:id="dateIssued" layoutX="493.0" layoutY="34.0" text="Date Issued:" />
+            <Label layoutX="21.0" layoutY="105.0" text="Name:" />
+            <Label layoutX="23.0" layoutY="138.0" text="Email:" />
+            <Label layoutX="23.0" layoutY="122.0" text="Contact #:" />
+            <Label fx:id="firsName" layoutX="90.0" layoutY="105.0" text="Document ID:" />
+            <Label fx:id="email" layoutX="93.0" layoutY="138.0" text="Due Date:" />
+            <Label fx:id="contactNumber" layoutX="93.0" layoutY="122.0" text="Date Issued:" />
+            <Label layoutX="21.0" layoutY="88.0" text="Billed to:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="296.0" layoutY="88.0" text="Shipped to:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="5.0" layoutY="235.0" prefHeight="0.0" prefWidth="629.0" style="-fx-background-color: black;" />
+            <TableView fx:id="previewTable" layoutX="21.0" layoutY="249.0" prefHeight="377.0" prefWidth="603.0">
+              <columns>
+                <TableColumn fx:id="productName" prefWidth="217.0" text="Product Name" />
+                <TableColumn fx:id="quantity" prefWidth="148.0" text="Quantity" />
+                  <TableColumn fx:id="price" prefWidth="111.0" text="Price" />
+                  <TableColumn fx:id="subtotal" prefWidth="126.0" text="Subtotal" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="21.0" layoutY="638.0" prefHeight="44.0" prefWidth="603.0" style="-fx-background-color: grey;">
+               <children>
+                  <Label fx:id="totalamount" layoutX="511.0" layoutY="14.0" prefHeight="17.0" prefWidth="65.0" text="Label" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="23.0" layoutY="155.0" text="Address:" />
+            <Label fx:id="address" layoutX="90.0" layoutY="155.0" prefHeight="17.0" prefWidth="205.0" text="Due Date:" />
+            <Label layoutX="23.0" layoutY="172.0" text="City:" />
+            <Label layoutX="23.0" layoutY="189.0" text="Country:" />
+            <Label layoutX="24.0" layoutY="206.0" text="Postal:" />
+            <Label fx:id="country" layoutX="93.0" layoutY="189.0" text="Due Date:" />
+            <Label fx:id="city" layoutX="93.0" layoutY="173.0" text="Date Issued:" />
+            <Label fx:id="postal" layoutX="90.0" layoutY="206.0" prefHeight="17.0" prefWidth="91.0" text="Due Date:" />
+            <Label layoutX="295.0" layoutY="105.0" text="Name:" />
+            <Label layoutX="297.0" layoutY="138.0" text="Email:" />
+            <Label layoutX="297.0" layoutY="122.0" text="Contact #:" />
+            <Label fx:id="shipfirstName" layoutX="364.0" layoutY="105.0" text="Document ID:" />
+            <Label fx:id="shipemail" layoutX="367.0" layoutY="138.0" text="Due Date:" />
+            <Label fx:id="shipContactNumber" layoutX="367.0" layoutY="122.0" text="Date Issued:" />
+            <Label layoutX="297.0" layoutY="155.0" text="Address:" />
+            <Label fx:id="shipAddress" layoutX="364.0" layoutY="155.0" prefHeight="17.0" prefWidth="259.0" text="Due Date:" />
+            <Label layoutX="297.0" layoutY="172.0" text="City:" />
+            <Label layoutX="297.0" layoutY="189.0" text="Country:" />
+            <Label layoutX="298.0" layoutY="206.0" text="Postal:" />
+            <Label fx:id="shipCountry" layoutX="367.0" layoutY="189.0" text="Due Date:" />
+            <Label fx:id="shipCity" layoutX="367.0" layoutY="173.0" text="Date Issued:" />
+            <Label fx:id="shipPostal" layoutX="364.0" layoutY="206.0" prefHeight="17.0" prefWidth="175.0" text="Due Date:" />
+            <Label fx:id="lastName" layoutX="183.0" layoutY="105.0" text="Document ID:" />
+            <Label fx:id="shiplastName" layoutX="457.0" layoutY="105.0" text="Document ID:" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

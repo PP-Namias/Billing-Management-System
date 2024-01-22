@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="318.0" prefWidth="1129.0" style="-fx-background-color: #040720;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingmanagementsystem.CustomerTableController">
+   <children>
+      <TableView fx:id="customer_table" layoutX="6.0" layoutY="45.0" onMouseClicked="#tableclicked" prefHeight="261.0" prefWidth="1111.0">
+         <columns>
+            <TableColumn fx:id="customerID" prefWidth="75.0" text="CustomerID" />
+            <TableColumn fx:id="firstName" prefWidth="75.0" text="firstName" />
+            <TableColumn fx:id="lastName" prefWidth="124.0" text="lastName" />
+            <TableColumn fx:id="contactNumCol" prefWidth="124.0" text="Contact Number" />
+            <TableColumn fx:id="email" prefWidth="211.0" text="email" />
+            <TableColumn fx:id="address" prefWidth="242.0" text="address" />
+            <TableColumn fx:id="town" prefWidth="142.0" text="town" />
+            <TableColumn fx:id="country" prefWidth="140.0" text="country" />
+            <TableColumn fx:id="postal" prefWidth="101.0" text="postal" />
+         </columns>
+      </TableView>
+      <TextField fx:id="searchbox" layoutX="7.0" layoutY="8.0" onKeyReleased="#searchcustomer" prefHeight="31.0" prefWidth="261.0" promptText="Search Id, First Name or Last Name:" style="-fx-background-radius: 20;" />
+      <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="236.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Billing_Management_System/src/Graphics/search.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="228.0" layoutY="11.0" orientation="VERTICAL" prefHeight="24.0" prefWidth="7.0" />
+      <ImageView fitHeight="23.0" fitWidth="25.0" layoutX="1092.0" layoutY="12.0" onMouseClicked="#Close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Graphics/close.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

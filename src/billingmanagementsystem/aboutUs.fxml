@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="665.0" prefWidth="1057.0" style="-fx-background-color: #040720;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingmanagementsystem.AboutUsController">
+    <stylesheets>
+        <URL value="@aboutus.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="665.0" prefWidth="1057.0" style="-fx-background-color: white;" styleClass="anchor_pane" stylesheets="@dashboard.css">
+         <children>
+            <TableView fx:id="employeeTable" layoutX="52.0" layoutY="154.0" onMouseClicked="#tableClick" prefHeight="453.0" prefWidth="956.0" style="-fx-background-color: white; -fx-border-color: black;">
+              <columns>
+                <TableColumn fx:id="userIDCol" prefWidth="129.0" text="user ID" />
+                <TableColumn fx:id="usernameCol" prefWidth="273.0" text="Username" />
+                  <TableColumn fx:id="passwordCol" prefWidth="351.0" text="Password" />
+                  <TableColumn fx:id="userTypeCol" prefWidth="202.0" text="User Type" />
+              </columns>
+            </TableView>
+            <TextField fx:id="searchbox" layoutX="52.0" layoutY="117.0" onKeyReleased="#SearchCustomer" prefHeight="25.0" prefWidth="296.0" promptText="Search ID, Product Name:" style="-fx-background-radius: 10 10 10 10;" />
+            <Label layoutX="52.0" layoutY="22.0" style="-fx-text-fill: rgb(67, 85, 133);" text="Employees">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="45.0" />
+               </font>
+            </Label>
+            <Line endX="870.0" layoutX="141.0" layoutY="48.0" startX="117.00010681152344" stroke="#435585" strokeLineCap="ROUND" strokeWidth="5.0" />
+            <TextField fx:id="employeeUsername" layoutX="540.0" layoutY="117.0" promptText="Username:" style="-fx-background-radius: 10 10 10 10;" />
+            <TextField fx:id="employeePassword" layoutX="705.0" layoutY="117.0" promptText="Password" style="-fx-background-radius: 10 10 10 10;" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="881.0" layoutY="112.0" onMouseClicked="#addEmployee" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Graphics/profile%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="929.0" layoutY="112.0" onMouseClicked="#editEmployee" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Graphics/pen.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="973.0" layoutY="112.0" onMouseClicked="#deleteEmployee" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Graphics/bin.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="confirmTxt" layoutX="801.0" layoutY="75.0" prefHeight="17.0" prefWidth="207.0" textFill="#2dd027" />
+            <Label fx:id="userIDLabel" layoutX="487.0" layoutY="121.0" prefHeight="17.0" prefWidth="30.0" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -6,6 +6,11 @@ package billingmanagementsystem;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.css.PseudoClass;
@@ -19,10 +24,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -30,7 +38,7 @@ import javafx.stage.Stage;
  * @author User
  */
 
-public class Admin_DashboardController implements Initializable {
+public class Admin_DashboardController implements Initializable{
 
     @FXML
     private Button dashboard_btn;
@@ -38,16 +46,9 @@ public class Admin_DashboardController implements Initializable {
     private Button product_btn;
     @FXML
     private Button billing_btn;
-    @FXML
     private Button about_us_btn;
     @FXML
     private Button sign_out_btn;
-    @FXML
-    private AnchorPane customer_pane;
-    @FXML
-    private AnchorPane product_pane;
-    @FXML
-    private AnchorPane billing_pane;
     @FXML
     private Button customer_btn;
     @FXML
@@ -63,9 +64,17 @@ public class Admin_DashboardController implements Initializable {
     @FXML
     private ImageView icon5;
     @FXML
-    private AnchorPane about_us_pane;
-    @FXML
     private ImageView icon51;
+    @FXML
+    private ImageView exit;
+    @FXML
+    private ImageView maximize;
+    @FXML
+    private ImageView minimize;
+    @FXML
+    private Button employeeBttn;
+    @FXML
+    private Label greetingText;
 
     /**
      * Initializes the controller class.
@@ -76,73 +85,47 @@ public class Admin_DashboardController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    	
        
+       loadFXML("Dashboard.fxml");
+
     }    
-
     
-    private Button lastClickedButton = null;
-    @FXML
-    private void Switch_Pane(ActionEvent event) {
-        Button clickedButton = (Button) event.getSource();
-
-        if (clickedButton == lastClickedButton) {
-            // Ignore the click if the same button was clicked twice in a row
-            return;
-        }
-
-        if (clickedButton == dashboard_btn) {
-           
-        }
-
-        // Update the last clicked button
-        lastClickedButton = clickedButton;
-        
-        if (clickedButton == dashboard_btn) {
-            dashboard_pane.setVisible(true);
-            customer_pane.setVisible(false);
-            product_pane.setVisible(false);
-            billing_pane.setVisible(false);
-            about_us_pane.setVisible(false);
-
-
-        } else if (clickedButton == customer_btn) {
-            dashboard_pane.setVisible(false);
-            customer_pane.setVisible(true);
-            product_pane.setVisible(false);
-            billing_pane.setVisible(false);
-            about_us_pane.setVisible(false);
-
-        } else if (clickedButton == product_btn) {
-            dashboard_pane.setVisible(false);
-            customer_pane.setVisible(false);
-            product_pane.setVisible(true);
-            billing_pane.setVisible(false);
-            about_us_pane.setVisible(false);
-            
-        } else if (clickedButton == billing_btn) {
-            dashboard_pane.setVisible(false);
-            customer_pane.setVisible(false);
-            product_pane.setVisible(false);
-            billing_pane.setVisible(true);
-            about_us_pane.setVisible(false);
-
-        } else if (clickedButton == about_us_btn) {
-            dashboard_pane.setVisible(false);
-            customer_pane.setVisible(false);
-            product_pane.setVisible(false);
-            billing_pane.setVisible(false);
-            about_us_pane.setVisible(true);
-        } 
+    public void setEmployeeButtonVisibility(boolean isVisible) {
+        employeeBttn.setVisible(isVisible);
     }
     
-    /*private void setButtonColor(Button button, boolean isSelected) {
-        if (isSelected) {
-            button.getStyleClass().add("selected-button");
-        } else {
-            button.getStyleClass().remove("selected-button");
+     public void setGreetingText(String text) {
+        greetingText.setText(text);
+    }
+    
+    private void loadFXML(String SwitchFXML) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(SwitchFXML));
+            Parent root = loader.load();
+            dashboard_pane.getChildren().setAll(root);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    }*/
+    }
+    
+    @FXML
+    private void Switch_Pane(ActionEvent event) {
+        if (event.getSource() == dashboard_btn) {
+            loadFXML("Dashboard.fxml");
+        }else if (event.getSource() == customer_btn){
+            loadFXML("Customer.fxml");
+        }else if (event.getSource() == product_btn){
+            loadFXML("Product.fxml");
+        }else if (event.getSource() == billing_btn) {
+            loadFXML("Billings.fxml");
+        }
+      else if (event.getSource() == employeeBttn) {
+            loadFXML("aboutUs.fxml");
+        }
+    }
+    
+
 
 @FXML
 private void changestyle(MouseEvent event) {
@@ -150,7 +133,7 @@ private void changestyle(MouseEvent event) {
     customer_btn.pseudoClassStateChanged(PseudoClass.getPseudoClass("active"), event.getSource() == customer_btn);
     product_btn.pseudoClassStateChanged(PseudoClass.getPseudoClass("active"), event.getSource() == product_btn);
     billing_btn.pseudoClassStateChanged(PseudoClass.getPseudoClass("active"), event.getSource() == billing_btn);
-    about_us_btn.pseudoClassStateChanged(PseudoClass.getPseudoClass("active"), event.getSource() == about_us_btn);
+    employeeBttn.pseudoClassStateChanged(PseudoClass.getPseudoClass("active"), event.getSource() == about_us_btn);
   
 }
 
@@ -167,12 +150,18 @@ private void changestyle(MouseEvent event) {
     if (result.isPresent() && result.get() == ButtonType.OK) {
         
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("LogIn.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
+        	Parent parent = FXMLLoader.load(getClass().getResource("LogIn.fxml"));
+			Scene scene = new Scene(parent);
+			Stage stage = new Stage();
+			stage.setTitle("Billing Management System");
             stage.setScene(scene);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initStyle(StageStyle.UTILITY);
+            
+            ((Stage) ((Node) event.getSource()).getScene().getWindow()).close();
             stage.show();
+          
+           
         } catch (IOException e) {
             e.printStackTrace(); 
         }
@@ -180,8 +169,34 @@ private void changestyle(MouseEvent event) {
     
 
     }
-    
-    
+
+    @FXML
+    private void exit(MouseEvent event) {
+        Stage stage = (Stage) ((ImageView) event.getSource()).getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    private void maximize(MouseEvent event) {
+        Stage stage = (Stage) ((ImageView) event.getSource()).getScene().getWindow();
+        if(stage.isMaximized()){
+        stage.setMaximized(false);
+        }else{
+        stage.setMaximized(true);
+        }
+    }
+
+    @FXML
+    private void minimize(MouseEvent event) {
+        Stage stage = (Stage) ((ImageView) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
     }
     
+    
+    
+    
+    
+    
+    
+ }
     
